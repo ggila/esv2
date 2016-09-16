@@ -1,0 +1,16 @@
+---
+- name: Install Packages
+  apt: >
+    pkg={{item}}
+    state=installed
+  sudo: True
+  with_items:
+    - vim
+    - emacs
+    - screen
+    - tig
+    - tree
+    - htop
+- name: vimrc
+  copy: src=vimrc dest=/etc/vim/vimrc mode=0644
+  sudo: yes

@@ -1,0 +1,4 @@
+- name: 'this is elastic'
+  hosts: localhost
+  roles:
+    - extras
