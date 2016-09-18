@@ -1,4 +1,5 @@
-- name: 'this is elastic'
+- include: conf.yml
+- name: es
   hosts: localhost
   roles:
-    - extras
+    - { role: elasticsearch, es_instance_name: "rasti" }
